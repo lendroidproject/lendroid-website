@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
@@ -7,10 +8,8 @@ app.config['DEBUG'] = True
 
 
 @app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Bayapadaatha, porumai kol. Nallathe nadakum. Tamizh vazhga!'
-
+def landing():
+    return render_template('landing-page-version1.html')
 
 @app.errorhandler(404)
 def page_not_found(e):

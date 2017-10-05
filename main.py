@@ -9,7 +9,7 @@ app.config['DEBUG'] = True
 
 @app.route('/')
 def landing():
-    return render_template('landing-page-version1.html')
+    return render_template('indexv3.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
